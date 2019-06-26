@@ -8,7 +8,7 @@ p {
 	font-family: "맑은 고딕";
 	font-size: 0.75em;
 	line-height:1.5em;
-	text-align:justify;
+	text-align:left;
 }
 
 p.text1 {
@@ -35,16 +35,23 @@ p.text2 span {
 
 p.cap {
 	text-transform: capitalize;
-	letter-spacing:20px;
-}
-
-p.up {
-	text-transform: uppercase;
 	letter-spacing:0px;
 }
 
+p.up {
+	border: 3px #f00 solid;
+	
+	text-transform: uppercase;
+	letter-spacing:0px;
+
+	width: 80px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 p.word_space {
-	word-spacing:10px;
+	word-spacing:30px;
 }
 
 

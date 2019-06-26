@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+* {
+	margin: 0;
+	padding: 0
+}
+
+h1 {
+	width: 200px;
+	height: 60px;
+	background:url(images/sp_search.png) no-repeat 0 0;
+	border: 1px solid #666;
+
+	font-size: 0;
+}
+
+h2 {
+	width: 200px;
+	height: 100px;
+	background:url(images/sp_search.png) no-repeat 10px 0;
+	border: 1px solid #666;
+	margin: 50px auto;
+	font-size: 0;
+}
+
+.search-box {
+	border: 1px solid #0F0;
+	float:left;
+
+}
+.search-box > a, .search-box > input {
+	float:left;
+	outline: none;
+	
+}
+.search-box #kbdgrey,
+.search-box #dd, .search-box #search {
+	margin-top: 20px;
+}
+.search-box > input {
+	margin-top: 25px;
+}
+.search-box #nlogo {
+	width: 200px;
+	height: 60px;
+	background:url(images/sp_search.png) no-repeat 0 0;
+
+	font-size: 0;
+}
+.search-box #kbdgrey {
+display:block;
+	width: 30px;
+	height: 25px;
+	background:url(images/sp_search.png) no-repeat -28px -53px;
+	
+	font-size: 0;
+	text-indent:101%
+}
+
+.search-box #dd {
+	width: 24px;
+	height: 25px;
+	background:url(images/sp_search.png) no-repeat -79px -53px;
+	font-size: 0;
+}
+
+.search-box #search {
+	width: 24px;
+	height: 25px;
+	background:url(https://s.pstatic.net/static/www/img/2018/sp_search.png) no-repeat -4px -60px;
+	background-color: #0F0;
+	font-size: 0;
+}
+
+</style>
+</head>
+<body>
+	<div class='search-box'>
+		<a href='#' id='nlogo'>네이버</a>
+		<input type='text' />
+		<a href='#' id='kbdgrey'>키보드</a>
+		<a href='#' id='dd'>drop down</a>
+		<a href='#' id='search'>serc</a>
+	</div>
+	
+</body>
+</html>

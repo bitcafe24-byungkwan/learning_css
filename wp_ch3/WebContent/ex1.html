@@ -3,7 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>마진과 패딩</title>
+
 <style type="text/css">
+* {margin:0px; padding:0px;}
 body {
 	font-family: "돋움", "맑은 고딕";
 	font-size: 0.8em;
@@ -14,13 +16,46 @@ body {
 	border:1px solid #666;
 	width:300px;
 	background-color: #FFC;
+	
+	padding-top:10px;
+	padding-right:20px;
+	padding-bottom:30px;
+	padding-left:40px;
+	/*sorten*/adding:10px 20px 30px 40px;
+	
+	padding:10px 20px 10px 20px;
+	/*sorten*/padding:10px 20px;
+	
+	padding:10px 10px 10px 10px;
+	/*sorten*/padding:10px;
+	
+	padding:50px 10px 80px 10px;
+	/*sorten*/padding:50px 10px 80px;
+	
+	margin:10px 10px 10px 10px;
+	margin-top:-20px;
 }
-
 </style>
+<script>
+window.onload=function(){
+	let el = document.getElementById('box')
+	console.log(parseInt(el.style.marginTop, 10)+","+el.style.height)
+	let count = 0;
+	let margin = 0;
+	var intervalId = setInterval(function(){
+		margin -= 20;
+		el.style.marginTop = margin + 'px'
+		
+		if(margin < -100){
+			clearInterval(intervalId);
+		}
+	}, 500)
+}
+</script>
 </head>
 
 <body>
-<div class="box1">
+<div id= 'box' class="box1" style="margin-top:20px; height:18px;">
 CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
 </div>
 
