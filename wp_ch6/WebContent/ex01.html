@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script>
+
+    var number1 = 5;
+    var number2 = new Number(5);
+    console.log(number1 + ":" + typeof (number1));
+    console.log(number2 + ":" + typeof (number2));
+    console.log(number1 + number2);
+
+    // 내장 타입 (object, number, bollean, string, function, (array), date)
+
+    var n = 10;
+    var f = 3.14;
+    var b = true;
+    var s = 'hello world';
+    var fn = function () { };
+    var o = {};
+    var arr = []; //array 타입은 없다.
+
+    console.log(`n : ${typeof (n)}`);
+    console.log(`f : ${typeof (f)}`);
+    console.log(`b : ${typeof (b)}`);
+    console.log(`s : ${typeof (s)}`);
+    console.log(`fn : ${typeof (fn)}`);
+    console.log(`o : ${typeof (o)}`);
+    console.log(`arr : ${typeof (arr)}`);
+
+
+    var n2 = new Number(5);
+    var f2 = new Number(3.14);
+    var b2 = new Number(false);
+    var s2 = new String('hello world');
+    var fn2 = new Function('a', 'b', 'return a+b');
+    var o2 = new Object();
+    var arr2 = new Array; //array 타입은 없다.
+
+    console.log('=================');
+    console.log(`n2 : ${typeof (n2)}`);
+    console.log(`f2 : ${typeof (f2)}`);
+    console.log(`b2 : ${typeof (b2)}`);
+    console.log(`s2 : ${typeof (s2)}`);
+    console.log(`fn2 : ${typeof (fn2)}`);
+    console.log(`o2 : ${typeof (o2)}`);
+    console.log(`arr2 : ${typeof (arr2)}`);
+
+    // 내장 타입의 객체는 확장이 불가능하다.
+    n.myVal = 20;
+    console.log(n.myVal);
+
+    // object 타입의 객체는 확장이 가능하다.
+    n2.myVal = 20;
+    console.log(n2.myVal);
+
+    // 브라우저 내장 객체 console
+    console.log('log');
+    console.warn('warn');
+    console.error('error');
+    console.info('info');
+  </script>
+</head>
+
+<body>
+  <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+    style="background-color:#D94A38;width:90px;height:20px;padding:40px;">클릭하세요!</div>
+</body>
+
+</html>
