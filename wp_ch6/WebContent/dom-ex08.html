@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		// 문서객체 클래스 이름 가져오기
+		window.onload = function () {
+			// document 객체를 사용해서 DOM 전체에서 탐색할 필요는 없다.
+			// document 객체 대신에 부모 문서객체로 호출이 가능하다.
+			var headers = document.getElementsByClassName('header');
+
+			setTimeout(function () {
+				headers[0].innerText = 'by getElementsByClassName()';
+				headers[1].innerText = 'by getElementsByClassName()';
+			}, 2000)
+		}
+
+	</script>
+</head>
+
+<body>
+
+	<h1>문서객체 가져오기 - 3</h1>
+	<h2 id='header-1' class = 'header'>Header</h1>
+	<h2 id='header-2' class = 'header'>Header</h1>
+
+</body>
+
+</html>
