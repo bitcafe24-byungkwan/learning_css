@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <script>
+    var s = '';
+    for (var key in window) {
+      s += key + ':' + window[key] + '\n';
+    }
+    console.log(s);
+
+    // 새로운 window 객체 생성
+    // yes /no, 1/0
+    // location,menubar, resizable, toolbar
+    // 최근은 layer popup을 많이 쓴다.
+    setTimeout(function () {
+      var popup = window.open('popup.html', 'popup', 'width=200, height=200', true);
+      //popup.document.write('<h1>팝업입니다</h1>');
+      setTimeout(function () {
+        // 자식창의 스크립트도 실행할 수 있다.
+        // 단, 보안상 cross-domain 문제 때문에
+        // 같은 domain에서만 가능하다.
+        // popup.pop();
+      }, 1000);
+    }, 2000);
+
+    setInterval(function(){
+      popup.moveBy(10,10);
+    }, 500);
+
+  </script>
+</head>
+
+<body>
+  <h1>Window global object</h1>
+</body>
+
+</html>
