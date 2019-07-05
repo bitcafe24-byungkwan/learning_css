@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+var s = '';
+for(var key in location){
+	s += key + ':' + location[key] + '\n';
+}
+console.log(s);
+
+// location 객체 : 주소창
+// 예제 URL :
+// href, host, hostname, port, path, hash, search
+
+//refresh 하는 방법1
+// location = location;
+</script>
+
+</head>
+
+<body>
+
+	<h1>lcation 객체</h1>
+
+	<!-- refresh 방법1-->
+	<button onclick = 'location = location;'>refresh1</button>
+
+	<!-- refresh 방법2-->
+	<button onclick = 'location.href = location.href;'>refresh2</button>
+
+	<!-- refresh 방법3-->
+	<button onclick = 'location.assign(location);'>refresh3</button>
+
+	<!-- refresh 방법4-->
+	<button onclick = 'location.replace(location);'>refresh4</button>
+
+	<!-- refresh 방법5-->
+	<button onclick = 'location.reload'>refresh5</button>
+</body>
+</html>
