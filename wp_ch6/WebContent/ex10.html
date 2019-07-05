@@ -4,35 +4,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Insert title here</title>
-
-
 <script type="text/javascript">
 
+// 현재 시간
+var now = new Date();
+console.log(now, typeof now);
 
-var displayDate = function(){
-	document.getElementById( "demo" ).innerHTML = Date();
-}
+// 2019년 7월 5일
+// month = current month - 1
+var d = new Date(2019, 6, 5);
+console.log(d);
 
-var cleanUp = function(){
-	document.getElementById( "demo" ).innerHTML = "";	
-}
+// 2019년 7월 5일 12:30:40
+var d = new Date(2019, 6, 5, 12, 30, 40);
+console.log(d);
 
-var onLoad = function() {
-	document.getElementById( "myButton" ).onclick = function() {
-		displayDate();
-	}	
-}
+// 객체 메소드
+console.log(`년 : ${d.getYear() + 1900},
+월 : ${d.getMonth() + 1},
+일 : ${d.getDate()}
+요일 : ${['일','월','화','수','목','금','토'][d.getDay]}
+시 : ${d.getHours()}
+분 : ${d.getMinutes()}
+초 : ${d.getSeconds()}
+밀리초 : ${d.getMilliseconds()}`);
+
 </script>
-
 </head>
-<body onload="onLoad()">
-<p>click button!!</p>
-<button id="myButton"
-	onmouseover= "displayDate()"
-	onmouseout= "cleanUp()"
->
-try it
-</button>
-<p id="demo"></p>
+<body>
+<h1>Date Built_In Object</h1>
 </body>
 </html>
