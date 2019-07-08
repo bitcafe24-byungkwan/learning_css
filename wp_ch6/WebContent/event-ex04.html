@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+
+		//
+		var registerEventHandler = function(element, eventname, handler){
+			element && 
+			element.attachEvent &&
+			element.attachEvent('on' + eventname, handler);
+
+		
+		}		
+		
+		
+		
+		/* DOM Level 2: Standard Event Model */
+		window.onload = function () {
+
+			var hder = document.getElementById('header');
+
+			// multi event listener
+			hder.addEventListener('click', function(){
+				console.log("click 1");
+			});
+
+			hder.addEventListener('click', function(){
+				console.log("click 2");
+			});
+
+
+			// IE 8 대응 (cross-browser)
+			registerEventHandler(hder,'click',function(){
+				console.log("click3 ");
+			});
+		}
+	</script>
+</head>
+
+<body>
+
+	<h1 id = 'header'>Click</h1>
+
+</body>
+
+</html>

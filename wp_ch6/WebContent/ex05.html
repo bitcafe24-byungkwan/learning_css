@@ -53,7 +53,7 @@
 			},
 			info3: function(){
 				var str = '';
-				for (prop in this) {
+				for (var prop in this) {
 					str += (prop + ':');
 				}
 				console.log(str.substring(0, str.length-1))
